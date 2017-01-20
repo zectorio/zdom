@@ -1,0 +1,23 @@
+{
+  "name": "zdom",
+  "version": "0.1.0",
+  "description": "Minimal DOM manipulation utility library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zectorio/zdom.git"
+  },
+  "keywords": [
+    "DOM",
+    "Javascript"
+  ],
+  "author": "Jayesh Salvi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zectorio/zdom/issues"
+  },
+  "homepage": "https://github.com/zectorio/zdom#readme"
+}
