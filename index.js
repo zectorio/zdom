@@ -148,7 +148,7 @@
     return doc.body.children[0];
   };
 
-  zdom.createElementNS = function (tag, namespace) {
+  zdom.createElementNS = function (namespace, tag) {
     return document.createElementNS(namespace,tag);
   };
 
