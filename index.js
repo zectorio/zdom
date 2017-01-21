@@ -131,13 +131,22 @@
     return document.createElement('div');
   };
 
+  zdom.createSpan = function () {
+    return document.createElement('span');
+  };
+
+  zdom.createInput = function (options) {
+    var el = document.createElement('input');
+    for(var key in options) {
+      zdom.set(el, key, options[key]);
+    }
+    return el;
+  };
+
   zdom.createCanvas = function () {
     return document.createElement('canvas');
   };
 
-  zdom.createSpan = function () {
-    return document.createElement('span');
-  };
 
   zdom.createImage = function () {
     return document.createElement('img');
