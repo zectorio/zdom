@@ -47,7 +47,15 @@
   /**
    * Creation of standard SVG elements
    */
-  zdom.createSVGElement = function(tag) {
+
+  zdom.createSVG = function (width, height) {
+    var el = zdom.createSVGElement('svg');
+    zdom.set(el, 'width', ''+width);
+    zdom.set(el, 'height', ''+height);
+    return el;
+  };
+
+  zdom.createSVGElement = function (tag) {
     return document.createElementNS(NS_SVG, tag);
   };
 
