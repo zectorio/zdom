@@ -151,8 +151,13 @@
     return el;
   };
 
-  zdom.createCanvas = function () {
-    return document.createElement('canvas');
+  zdom.createCanvas = function (width, height) {
+    var el = document.createElement('canvas');
+    if(width && height) {
+      el.width = width;
+      el.height = height;
+    }
+    return el;
   };
 
 
