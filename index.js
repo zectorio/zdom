@@ -123,7 +123,9 @@
 
   zdom.createPath = function (d, style) {
     var el = document.createElementNS(NS_SVG, 'path');
-    zdom.set(el, 'd', d);
+    if(d) {
+      zdom.set(el, 'd', d);
+    }
     zdom.style(el, style||'');
     return el;
   };
