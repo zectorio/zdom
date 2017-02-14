@@ -223,8 +223,8 @@
   };
 
   zdom.empty = function (el) {
-    for(var i=0; i<el.children.length; i++) {
-      el.children[i].remove();
+    while(el.children.length > 0) {
+      el.children[0].remove();
     }
   };
 
