@@ -269,8 +269,10 @@
       return parseInt(value);
     } else if(/^\d+px$/.test(value)) {
       return parseInt(/^(\d+)px$/.exec(value)[1]);
+    } else if(/^\d+.\d+px$/.test(value)) {
+      return parseFloat(/^(\d+.\d+)px$/.exec(value)[1]);
     } else {
-      console.assert(false);
+      return NaN;
     }
   };
 
