@@ -306,6 +306,31 @@
     el.dispatchEvent(new CustomEvent(evname, {detail:detail}));
   };
 
+  zdom.listenMouse = function (el, callbacks) {
+    callbacks = callbacks || {};
+    if(callbacks.down) {
+      el.onmousedown = callbacks.down;
+    }
+    if(callbacks.move) {
+      el.onmousemove = callbacks.move;
+    }
+    if(callbacks.up) {
+      el.onmouseup = callbacks.up;
+    }
+    if(callbacks.over) {
+      el.onmouseover = callbacks.over;
+    }
+    if(callbacks.out) {
+      el.onmouseout = callbacks.out;
+    }
+    if(callbacks.click) {
+      el.onclick = callbacks.click;
+    }
+    if(callbacks.dblclick) {
+      el.ondblclick = callbacks.dblclick;
+    }
+  };
+
   if(typeof module !== 'undefined') {
     module.exports = zdom;
   }
