@@ -274,8 +274,36 @@
     }
   };
 
-  zdom.text = function(el, text) {
+  zdom.text = function (el, text) {
     el.textContent = text;
+  };
+
+  zdom.absoluteLeft = function (el) {
+    let left = el.offsetLeft;
+    let parent;
+    do {
+      parent = el.offsetParent;
+      left += parent.offsetLeft;
+    } while(parent === document.body);
+    return left;
+  };
+
+  zdom.absoluteTop = function (el) {
+    let top = el.offsetTop;
+    let parent;
+    do {
+      parent = el.offsetParent;
+      top += parent.offsetTop;
+    } while(parent === document.body);
+    return top;
+  };
+
+  zdom.listen = function (el, evname, callback) {
+    el.addEventListener(evname, callback);
+  };
+
+  zdom.trigger = function (el, evname, detail) {
+    el.dispatchEvent(new CustomEvent(evname, {detail:detail}));
   };
 
   if(typeof module !== 'undefined') {
