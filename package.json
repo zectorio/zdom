@@ -1,6 +1,6 @@
 {
   "name": "zdom",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Minimal DOM manipulation utility library",
   "main": "index.js",
   "scripts": {

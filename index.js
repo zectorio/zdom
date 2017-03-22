@@ -286,7 +286,7 @@
     do {
       parent = parent.offsetParent;
       left += parent.offsetLeft;
-    } while(parent.isSameNode(document.body));
+    } while(!parent.isSameNode(document.body));
     return left;
   };
 
@@ -296,7 +296,7 @@
     do {
       parent = parent.offsetParent;
       top += parent.offsetTop;
-    } while(parent.isSameNode(document.body));
+    } while(!parent.isSameNode(document.body));
     return top;
   };
 
