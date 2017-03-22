@@ -281,22 +281,22 @@
   };
 
   zdom.absoluteLeft = function (el) {
-    let left = el.offsetLeft;
-    let parent;
+    var left = el.offsetLeft;
+    var parent;
     do {
       parent = el.offsetParent;
       left += parent.offsetLeft;
-    } while(parent === document.body);
+    } while(parent.isSameNode(document.body));
     return left;
   };
 
   zdom.absoluteTop = function (el) {
-    let top = el.offsetTop;
-    let parent;
+    var top = el.offsetTop;
+    var parent;
     do {
       parent = el.offsetParent;
       top += parent.offsetTop;
-    } while(parent === document.body);
+    } while(parent.isSameNode(document.body));
     return top;
   };
 
