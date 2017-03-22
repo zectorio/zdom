@@ -282,9 +282,9 @@
 
   zdom.absoluteLeft = function (el) {
     var left = el.offsetLeft;
-    var parent;
+    var parent = el;
     do {
-      parent = el.offsetParent;
+      parent = parent.offsetParent;
       left += parent.offsetLeft;
     } while(parent.isSameNode(document.body));
     return left;
@@ -292,9 +292,9 @@
 
   zdom.absoluteTop = function (el) {
     var top = el.offsetTop;
-    var parent;
+    var parent = el;
     do {
-      parent = el.offsetParent;
+      parent = parent.offsetParent;
       top += parent.offsetTop;
     } while(parent.isSameNode(document.body));
     return top;
